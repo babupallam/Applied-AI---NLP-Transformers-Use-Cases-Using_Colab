@@ -35,22 +35,3 @@ To run the notebook, ensure you have the following:
 - Internet connection (for downloading models)
 
 The `transformers` library is the primary dependency. It will be automatically installed in the Colab environment.
-
-## Usage
-
-### Question Answering
-
-In this section, the notebook demonstrates how to use a pre-trained model to answer questions based on a given context. The model processes the context and the question to generate an accurate answer.
-
-#### Example
-```python
-from transformers import pipeline
-
-qa_pipeline = pipeline("question-answering")
-
-result = qa_pipeline({
-    'context': "Hugging Face is a company based in New York City.",
-    'question': "Where is Hugging Face based?"
-})
-
-print(result['answer'])
